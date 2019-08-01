@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\bin\Debug\netcoreapp2.1\Homework_Recursion.deps.json
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\bin\Debug\netcoreapp2.1\Homework_Recursion.runtimeconfig.json
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\bin\Debug\netcoreapp2.1\Homework_Recursion.runtimeconfig.dev.json
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\bin\Debug\netcoreapp2.1\Homework_Recursion.dll
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\bin\Debug\netcoreapp2.1\Homework_Recursion.pdb
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.AssemblyInfo.cs
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.dll
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.pdb
+C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.csprojAssemblyReference.cache
