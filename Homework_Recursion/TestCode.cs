@@ -33,5 +33,49 @@ namespace Homework_Recursion
                 return ArrayPermutation(new int[] { array2[1], array2[0], array2[2] }, elements - 1);
             }
         }
+
+
+        private static int NumberCombination(int n, int m)
+        {
+            if ((m == 0 || n > 0) && (m == n & n >= 0))
+            {
+                return 1;
+            }
+            else if (m > n && n >= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return NumberCombination(m - 1, n - 1) + NumberCombination(m, n - 1);
+            }
+
+            /*if ((n + 1) == 1 || (m + 1) == 1 || n == m)
+            {
+                return 1;
+            }
+            else
+            {
+                return NumberCombination(n - 1, m - 1) + NumberCombination(n - 1, m);
+            }*/
+
+            /*if (1 <= n && n <= m - 1)
+            {
+                return NumberCombination(m - 1, n - 1) + NumberCombination(m - 1, n);
+            }
+            else if (m > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }*/
+
+            /*if (n == 0) return 1;
+            if (m == 0) return 0;
+            //return NumberCombination(n - 1, m - 1) + NumberCombination(n - 1, m);
+            return NumberCombination(m - 1, n - 1) + NumberCombination(m, n - 1);*/
+        }
     }
 }
