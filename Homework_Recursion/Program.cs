@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Homework_Recursion
 {
@@ -8,55 +9,77 @@ namespace Homework_Recursion
         {
             //zad1
             long nNumber;
+            Console.Write("Enter number for sum of Nth natural number: ");
             if (long.TryParse(Console.ReadLine(), out nNumber))
             {
                 Console.WriteLine("Sum of first Nth natural numbers: " + NNaturalRecursion(nNumber));
             }
+            Console.Write(Environment.NewLine);
 
             //zad2
             int numberToTest;
             Console.Write("Enter a number to check if its prime: ");
             if (int.TryParse(Console.ReadLine(), out numberToTest))
             {
-                Console.WriteLine(PrimeNumberCheck(numberToTest));
+                Console.WriteLine("Result: " + PrimeNumberCheck(numberToTest));
             }
+            Console.Write(Environment.NewLine);
 
             //zad3
-            Console.WriteLine("Enter word or number to check if its a palindrome:");
-            Console.WriteLine(PalindromeCheck(Console.ReadLine()));
+            Console.Write("Enter word or number to check if its a palindrome:");
+            Console.WriteLine("Result: " + PalindromeCheck(Console.ReadLine()));
+            Console.Write(Environment.NewLine);
 
             //zad4
-            /*Console.WriteLine("Permutations Recursion");
-            Console.WriteLine("Enter number 2-5: ");
+            Console.WriteLine("Permutations Recursion");
+            Console.Write("Enter number 2-5: ");
             int numberPermutation;
             if (int.TryParse(Console.ReadLine(), out numberPermutation) && (numberPermutation >= 2 & numberPermutation <= 5))
             {
+                int[] numbersArray = new int[numberPermutation];
+                for (int i = 0; i < numberPermutation; i++)
+                {
+                    Console.Write("Enter number "+(i + 1)+": ");
+                    int.TryParse(Console.ReadLine(), out numbersArray[i]);
+                }
+                if (numberPermutation == 3)
+                {
+                    Console.WriteLine("Result: " + ArrayPermutation3Elements(numbersArray));
+                }
+                else if (numberPermutation == 4)
+                {
 
-            }*/
-            //Console.WriteLine(ArrayPermutation(new int[] { 5, 7, 3 }));
-            //Console.WriteLine(ArrayPermutationV2(new int[] { 1, 2, 3 }));
-            //end zad4
+                }
+                else
+                {
+                    //numberPermutation == 5
+                }
+            }
+            Console.Write(Environment.NewLine);
 
             //zad5
             int decimalNumber;
             Console.Write("Enter decimal number to convert into binary: ");
             if (int.TryParse(Console.ReadLine(), out decimalNumber))
             {
-                Console.WriteLine(DecimalToBinary(decimalNumber));
+                Console.WriteLine("Result: " + DecimalToBinary(decimalNumber));
             }
+            Console.Write(Environment.NewLine);
 
             //zad6
             int m;
             int n;
-            Console.WriteLine("Enter numer m: ");
+            Console.WriteLine("Number of combinations of n-different elements for m");
+            Console.Write("Enter numer m: ");
             if (int.TryParse(Console.ReadLine(), out m))
             {
-                Console.WriteLine("Enter number n: ");
+                Console.Write("Enter number n: ");
                 if (int.TryParse(Console.ReadLine(), out n))
                 {
-                    Console.WriteLine(NumberCombination(m, n));
+                    Console.WriteLine("Result: " + NumberCombination(m, n));
                 }
             }
+            Console.Write(Environment.NewLine);
         }
 
         private static long NNaturalRecursion(long number)
@@ -105,43 +128,33 @@ namespace Homework_Recursion
             }
         }
 
-        /*private static string ArrayPermutation(int[] array, int elements = 3)
+        private static string ArrayPermutation3Elements(int[] array, int elements = -1)
         {
-            if (elements < 1)
+            if (elements == -1)
             {
-                return string.Empty;
-            }
-            else
-            {
-                int[] array2 = new int[] { array[0], array[2], array[1] };
-
-                Console.Write(string.Join("", array) + " ");
-                Console.Write(string.Join("", array2) + " ");
-
-                return ArrayPermutation(new int[] { array2[1], array2[0], array2[2] }, elements - 1);
-            }
-        }
-
-        private static string ArrayPermutationV2(int[] array, int elements = 6)
-        {
-            if (elements < 1)
-            {
-                return string.Empty;
-            }
-            else
-            {
-                if (elements % 2 == 1)
+                elements = 1;
+                for (int i = 0; i < array.Length; i++)
                 {
-                    Console.Write(string.Join("", array) + " ");
-                    return ArrayPermutationV2(new int[] { array[1], array[0], array[2] }, elements - 1) + " ";
+                    elements *= array.Length - i;
+                }
+            }
+
+            if (elements < 1)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                if (elements % 2 == 0)
+                {
+                    return string.Join("", array) + " " + ArrayPermutation3Elements(new int[] { array[0], array[2], array[1] }, elements - 1);
                 }
                 else
                 {
-                    Console.Write(string.Join("", array) + " ");
-                    return ArrayPermutationV2(new int[] { array[0], array[2], array[1] }, elements - 1) + " ";
+                    return string.Join("", array) + " " + ArrayPermutation3Elements(new int[] { array[1], array[0], array[2] }, elements - 1);
                 }
             }
-        }*/
+        }
 
         private static int DecimalToBinary(int number)
         {

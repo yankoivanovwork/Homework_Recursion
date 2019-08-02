@@ -8,4 +8,3 @@ C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netco
 C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.AssemblyInfo.cs
 C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.dll
 C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.pdb
-C:\Users\User\source\repos\Homework_Recursion\Homework_Recursion\obj\Debug\netcoreapp2.1\Homework_Recursion.csprojAssemblyReference.cache
